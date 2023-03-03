@@ -87,6 +87,9 @@ def main():
     elif args.target == "cuda":
         from loopy.target.cuda import CudaTarget
         target = CudaTarget
+    elif args.target == "hip":
+        from loopy.target.hip import HIPTarget
+        target = HIPTarget
     else:
         raise ValueError("unknown target: %s" % target)
 
